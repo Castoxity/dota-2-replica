@@ -37,3 +37,38 @@ function isElementInViewport(el) {
         rect.right <= (window.innerWidth || document.documentElement.clientWidth)
     );
 }
+const openPopupBtn = document.getElementById('welcome');
+const closePopupBtn = document.getElementById('closePopup');
+const imagePopup = document.getElementById('imagePopup');
+
+openPopupBtn.addEventListener('click', function() {
+    imagePopup.style.display = 'block';
+});
+
+closePopupBtn.addEventListener('click', function() {
+    imagePopup.style.display = 'none';
+});
+
+window.addEventListener('click', function(event) {
+    if (event.target == imagePopup) {
+        imagePopup.style.display = 'none';
+    }
+});
+
+const openPopupBtns = document.getElementById('patch');
+const closePopupBtns = document.getElementById('closePopup-2');
+const imagePopups = document.getElementById('imagePopup-2');
+
+openPopupBtns.addEventListener('click', function() {
+    imagePopups.style.display = 'block';
+});
+
+closePopupBtns.addEventListener('click', function() {
+    imagePopups.style.display = 'none';
+});
+
+window.addEventListener('click', function(event) {
+    if (event.target == imagePopups) {
+        imagePopups.style.display = 'none';
+    }
+});
